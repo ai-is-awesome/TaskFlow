@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 // import GroupList from "./Components/GroupList";
 import CreateList from "./Components/CreateList";
+import GroupList from "./Components/GroupList";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       </Heading>
       <Box px={"1rem"} py=".5rem">
         <CreateList />
+        <GroupList />
       </Box>
     </div>
   );
