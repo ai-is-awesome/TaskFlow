@@ -33,8 +33,8 @@ const List = ({ id }) => {
         pb="2rem"
         maxW="sm"
       >
-        <Flex bg="cyan.800" p="2">
-          <Heading p="2" as="h2" size="lg" bg="cyan.800" color="white">
+        <Flex bg="teal.200" p="2">
+          <Heading p="2" as="h2" size="lg" bg="" color="white">
             {list.name}
           </Heading>
           <MdDelete style={{ color: "red", fontSize: "24px" }} />

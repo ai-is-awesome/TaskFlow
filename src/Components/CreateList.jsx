@@ -1,4 +1,4 @@
-import { Button, VStack, Text } from "@chakra-ui/react";
+import { Button, VStack, Text, Center } from "@chakra-ui/react";
 
 import { Input } from "@chakra-ui/react";
 import { useState } from "react";
@@ -20,10 +20,11 @@ const CreateList = () => {
       setError("");
     }
   };
+
   return (
     <>
       <form onSubmit={formSubmit}>
-        <VStack align="flex-start" mb="8">
+        <VStack align="center" mb="8">
           <Input
             value={listName}
             onChange={(e) => setListName(e.target.value)}
