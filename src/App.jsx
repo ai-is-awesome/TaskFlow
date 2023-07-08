@@ -5,7 +5,7 @@ import { Heading } from "@chakra-ui/react";
 // import GroupList from "./Components/GroupList";
 import CreateList from "./Components/CreateList";
 import GroupList from "./Components/GroupList";
-import SideBar from "./Components/Sidebar";
+import SideBar from "./Components/SideBar";
 
 export default function App() {
   return (
