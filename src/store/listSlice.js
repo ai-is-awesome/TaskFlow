@@ -2,7 +2,11 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { addTask } from "./taskSlice";
 
 const initialState = {
-  lists: [{ name: "Todo", taskIds: [], emoji: "", listId: nanoid() }],
+  lists: [
+    { name: "Todo", taskIds: [], emoji: "", listId: nanoid() },
+    { name: "Doing", taskIds: [], emoji: "", listId: nanoid() },
+    { name: "Completed", taskIds: [], listId: nanoid() },
+  ],
 };
 
 const listSlice = createSlice({

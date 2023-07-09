@@ -16,7 +16,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 const client = new ApolloClient({
-  uri: "http://localhost:3001/",
+  uri: "https://26z0v6dvg6.execute-api.us-east-1.amazonaws.com/",
   cache: new InMemoryCache(),
 });
 

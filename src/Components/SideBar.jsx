@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { GrInbox } from "react-icons/gr";
 import { useQuery, gql } from "@apollo/client";
 
@@ -25,7 +25,16 @@ export default function SideBar(props) {
         // px={"2rem"}
         // py="2rem"
       >
-        ewfewff
+        <Heading
+          fontSize={"1.5rem"}
+          color={"white"}
+          pt={"2rem"}
+          pl=".5rem"
+          pr=".5rem"
+        >
+          TASKFLOOOW
+        </Heading>
+
         <Box color={"white"} px="1rem" py="2rem" color="black">
           <Box my="1rem" display={"flex"} alignItems={"center"} gap="2">
             <GrInbox backgroundColor="white" color="white" /> Boards

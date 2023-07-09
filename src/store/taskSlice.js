@@ -2,7 +2,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
   // tasks: [{ title: "", createdAt: "", listId: "", tagIds: [], taskId: "" }]
-  tasks: [],
+  tasks: [{ title: "", createdAt: "", listId: "" }],
 };
 
 const taskSlice = createSlice({
