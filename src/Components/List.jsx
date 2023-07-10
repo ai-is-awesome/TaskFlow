@@ -27,11 +27,12 @@ const List = ({ id }) => {
   return (
     <>
       <Box
-        border="1px"
+        // border="1px"
         bg="gray.100"
-        borderColor="gray.500"
+        // borderColor="gray.500"
         pb="2rem"
         maxW="sm"
+        rounded={"md"}
       >
         <Flex bg="teal.200" p="2">
           <Heading p="2" as="h2" size="lg" bg="" color="white">

@@ -1,5 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { GrInbox } from "react-icons/gr";
+import { IoIosPeople } from "react-icons/io";
 import { useQuery, gql } from "@apollo/client";
 
 export default function SideBar(props) {
@@ -26,23 +27,50 @@ export default function SideBar(props) {
         // py="2rem"
       >
         <Heading
-          fontSize={"1.5rem"}
+          fontSize={"1.8rem"}
           color={"white"}
           pt={"2rem"}
           pl=".5rem"
           pr=".5rem"
+          fontWeight={"black"}
         >
           TASKFLOOOW
         </Heading>
 
         <Box color={"white"} px="1rem" py="2rem" color="black">
-          <Box my="1rem" display={"flex"} alignItems={"center"} gap="2">
+          <Box
+            my="1rem"
+            display={"flex"}
+            alignItems={"center"}
+            gap="2"
+            fontSize={"1.2rem"}
+            fontWeight={"bold"}
+          >
             <GrInbox backgroundColor="white" color="white" /> Boards
           </Box>
 
           {data &&
-            data.boards.map((board) => <p key={board._id}>{board.name}</p>)}
-          <Box>Members</Box>
+            data.boards.map((board) => (
+              <Box
+                bg={"white"}
+                mb="1rem"
+                rounded={"md"}
+                p=".5rem"
+                key={board._id}
+              >
+                {board.name}
+              </Box>
+            ))}
+          <Box
+            my="1rem"
+            display={"flex"}
+            alignItems={"center"}
+            gap="2"
+            fontSize={"1.2rem"}
+            fontWeight={"bold"}
+          >
+            <IoIosPeople /> Members
+          </Box>
         </Box>
       </Box>
     </>

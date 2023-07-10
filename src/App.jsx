@@ -12,7 +12,7 @@ export default function App() {
     <>
       <Box display={"flex"}>
         <SideBar flex="1" />
-        <Box px={"rem"} py="rem" ml="" bg="gray.100" flex="10" mt="rem">
+        <Box px={"rem"} py="rem" ml="" bg="gray.200" flex="10" mt="rem">
           <Box
             px={"1rem"}
             as="h1"
@@ -27,7 +27,7 @@ export default function App() {
           </Box>
           {/* <Box px={"1rem"} py="2rem" ml="" bg="gray.100" flex="10" mt="rem"></Box> */}
           {/* Todo Boards */}
-          <Box px={"1rem"} py="2rem" ml="" bg="gray.100" flex="10" mt="rem">
+          <Box px={"1rem"} py="2rem" ml="" bg="gray.200" flex="10" mt="rem">
             <CreateList />
             <GroupList />
           </Box>
