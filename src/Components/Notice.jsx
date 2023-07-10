@@ -9,7 +9,7 @@ export default function Notice({ children }) {
     show && (
       <>
         <Box
-          bg="teal.200"
+          bg="red.100"
           p="1rem"
           rounded="md"
           position={"relative"}
