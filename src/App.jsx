@@ -1,11 +1,13 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Flex } from "@chakra-ui/react";
 
 import { Heading } from "@chakra-ui/react";
+import { AiFillWarning } from "react-icons/ai";
 
 // import GroupList from "./Components/GroupList";
 import CreateList from "./Components/CreateList";
 import GroupList from "./Components/GroupList";
 import SideBar from "./Components/SideBar";
+import Notice from "./Components/Notice";
 
 export default function App() {
   return (
@@ -26,8 +28,18 @@ export default function App() {
             <Button bg={"cyan.700"}>Login</Button>
           </Box>
           {/* <Box px={"1rem"} py="2rem" ml="" bg="gray.100" flex="10" mt="rem"></Box> */}
-          {/* Todo Boards */}
+          {/* Main Center box */}
           <Box px={"1rem"} py="2rem" ml="" bg="gray.200" flex="10" mt="rem">
+            <Notice>
+              <Flex alignItems={"center"}>
+                <span>
+                  <AiFillWarning />
+                </span>
+                This app is under heavy development, it maybe unstable to use.
+                I've deployed it just to give a basic idea about what the
+                application is about
+              </Flex>
+            </Notice>
             <CreateList />
             <GroupList />
           </Box>
