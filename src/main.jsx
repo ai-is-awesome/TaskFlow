@@ -10,8 +10,8 @@ import {
   ApolloProvider,
   gql,
 } from "@apollo/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-console.log("hello from here");
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
@@ -20,26 +20,19 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// client
-//   .query({
-//     query: gql`
-//       query getData {
-//         boards {
-//           _id
-//           name
-//         }
-//       }
-//     `,
-//   })
-//   .then((result) => console.log("results: ", result))
-//   .catch((err) => console.log(err));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+]);
 
 root.render(
   <StrictMode>
     <ChakraProvider theme={theme}>
       <Provider store={store}>
         <ApolloProvider client={client}>
-          <App />
+          <RouterProvider router={router} />
         </ApolloProvider>
       </Provider>
     </ChakraProvider>

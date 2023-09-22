@@ -8,8 +8,18 @@ import CreateList from "./Components/CreateList";
 import GroupList from "./Components/GroupList";
 import SideBar from "./Components/SideBar";
 import Notice from "./Components/Notice";
+import { useDispatch, useSelector } from "react-redux";
+import { listenToAuthState, selectFirebaseData } from "./store/userSlice";
+import { useEffect } from "react";
 
 export default function App() {
+  const firebaseData = useSelector(selectFirebaseData);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(listenToAuthState());
+  }, [dispatch]);
+
   return (
     <>
       <Box display={"flex"}>

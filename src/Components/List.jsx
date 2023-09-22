@@ -8,7 +8,8 @@ import {
   VStack,
   Flex,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { chakra } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectListById } from "../store/listSlice";
 import { addTask } from "../store/taskSlice";
@@ -18,12 +19,26 @@ import { MdDelete } from "react-icons/md";
 const List = ({ id }) => {
   const list = useSelector((state) => selectListById(state, id));
   const [task, setTask] = useState("");
+  const [error, setError] = useState(null);
   const dispatch = useDispatch();
   const onSubmit = (e) => {
     e.preventDefault();
+    setError(null);
+    if (task.length < 3) {
+      setError("Task should have at least 2 characters");
+      return;
+    }
     dispatch(addTask(task, id));
     setTask("");
   };
+
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError(null);
+      }, 2000);
+    }
+  }, [error]);
   return (
     <>
       <Box
@@ -59,6 +74,9 @@ const List = ({ id }) => {
                 Add Task
               </Button>
             </HStack>
+            <chakra.p my="2" color={"red.500"}>
+              {error && error}
+            </chakra.p>
           </form>
         </VStack>
       </Box>
