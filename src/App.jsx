@@ -11,6 +11,7 @@ import Notice from "./Components/Notice";
 import { useDispatch, useSelector } from "react-redux";
 import { listenToAuthState, selectFirebaseData } from "./store/userSlice";
 import { useEffect } from "react";
+import { customTheme } from "./theme";
 
 export default function App() {
   const firebaseData = useSelector(selectFirebaseData);
@@ -22,7 +23,7 @@ export default function App() {
 
   return (
     <>
-      <Box display={"flex"}>
+      <Box display={"flex"} minH={"100vh"}>
         <SideBar flex="1" />
         <Box px={"rem"} py="rem" ml="" bg="gray.200" flex="10" mt="rem">
           <Box
@@ -30,7 +31,7 @@ export default function App() {
             as="h1"
             size="xl"
             color="white"
-            bg="teal.200"
+            bg={customTheme.pimaryColor}
             py="1.5rem"
             display={"flex"}
             justifyContent={"flex-end"}

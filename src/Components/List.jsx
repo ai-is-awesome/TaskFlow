@@ -15,6 +15,7 @@ import { selectListById } from "../store/listSlice";
 import { addTask } from "../store/taskSlice";
 import DisplayTask from "./DisplayTask";
 import { MdDelete } from "react-icons/md";
+import { customTheme } from "../theme";
 
 const List = ({ id }) => {
   const list = useSelector((state) => selectListById(state, id));
@@ -49,7 +50,7 @@ const List = ({ id }) => {
         maxW="sm"
         rounded={"md"}
       >
-        <Flex bg="teal.200" p="2">
+        <Flex bg={customTheme.pimaryColor} p="2">
           <Heading p="2" as="h2" size="lg" bg="" color="white">
             {list.name}
           </Heading>
@@ -70,7 +71,11 @@ const List = ({ id }) => {
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
               />
-              <Button bg="cyan.700" color="white" type="submit">
+              <Button
+                bg={customTheme.secondaryColor}
+                color="white"
+                type="submit"
+              >
                 Add Task
               </Button>
             </HStack>

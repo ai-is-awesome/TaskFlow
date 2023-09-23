@@ -12,7 +12,7 @@ const GroupList = ({ listId }) => {
       <Box>{lists.length}</Box>
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         {lists.map((id) => (
-          <GridItem>
+          <GridItem key={id}>
             <List id={id} />
           </GridItem>
         ))}

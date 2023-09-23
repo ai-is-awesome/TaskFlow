@@ -2,6 +2,7 @@ import { Box, Heading } from "@chakra-ui/react";
 import { GrInbox } from "react-icons/gr";
 import { IoIosPeople } from "react-icons/io";
 import { useQuery, gql } from "@apollo/client";
+import { customTheme } from "../theme";
 
 export default function SideBar(props) {
   console.log("Props: ", props);
@@ -21,7 +22,7 @@ export default function SideBar(props) {
       <Box
         as="aside"
         {...props}
-        bg={"teal.200"}
+        bg={customTheme.pimaryColor}
         minH={"90vh"}
         // px={"2rem"}
         // py="2rem"
