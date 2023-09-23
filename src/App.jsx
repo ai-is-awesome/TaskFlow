@@ -35,7 +35,9 @@ export default function App() {
             display={"flex"}
             justifyContent={"flex-end"}
           >
-            <Button bg={"cyan.700"}>Login</Button>
+            <Button as={"a"} href="/login" bg={"cyan.700"}>
+              Login
+            </Button>
           </Box>
           {/* <Box px={"1rem"} py="2rem" ml="" bg="gray.100" flex="10" mt="rem"></Box> */}
           {/* Main Center box */}

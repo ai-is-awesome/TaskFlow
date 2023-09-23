@@ -11,6 +11,8 @@ import {
   gql,
 } from "@apollo/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import LoginPage from "./Pages/LoginPage";
+import SignupPage from "./Pages/SignupPage";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -25,6 +27,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
+  { path: "/login", element: <LoginPage /> },
+  { path: "/signup", element: <SignupPage /> },
 ]);
 
 root.render(

@@ -36,8 +36,7 @@ export default function SideBar(props) {
         >
           TASKFLOOOW
         </Heading>
-
-        <Box color={"white"} px="1rem" py="2rem" color="black">
+        <Box color={"white"} px="1rem" py="2rem">
           <Box
             my="1rem"
             display={"flex"}
@@ -57,6 +56,7 @@ export default function SideBar(props) {
                 rounded={"md"}
                 p=".5rem"
                 key={board._id}
+                color={"black"}
               >
                 {board.name}
               </Box>

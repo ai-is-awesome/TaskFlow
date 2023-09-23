@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
 const initialState = getLogoutUserObject();
@@ -24,6 +24,12 @@ export const listenToAuthState = () => (dispatch) => {
   console.log("Auth change state enter!");
   onAuthStateChanged(auth, (user) => {
     dispatch(setFirebaseData({ USER: "PIYUSH" }));
+  });
+};
+
+export const loginWithEmail = (email, password) => (dispatch) => {
+  signInWithEmailAndPassword(auth, email, password).then((user) => {
+    console.log("User: ", user);
   });
 };
 
